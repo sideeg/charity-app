@@ -1,0 +1,738 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+
+
+body{
+
+
+font-family: 'Poppins', sans-serif;
+
+}
+
+
+p{
+
+font-family: 'Poppins', sans-serif;
+
+
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+
+font-family: 'Poppins', sans-serif;
+
+
+}
+
+
+
+.sign_section {
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   background-image: url(../images/login-bg.png);
+   background-position: bottom;
+   position: relative;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+.sign_section:after {
+   position: absolute;
+   height: 100vh;
+   content: '';
+    background: rgb(89 186 182 / 50%);
+   z-index: 1;
+   width: 100%;
+}
+
+.sign_section>div {
+   position: relative;
+   z-index: 2;
+}
+
+/*.sign_section .card {
+   background: #fdfdfd;
+   border-color: #ececec;
+   border-radius: 15px;
+}
+*/
+.sign_section .card {
+
+border-color: unset;
+    border-radius: 0px;
+    background: #fff;
+    box-shadow: 3px 3px 0px 1px #ffffff;
+    border: unset;
+}
+
+
+
+
+
+
+
+
+.sign_section .card-header {
+   background: transparent;
+   border: none;
+   text-align: center;
+   font-size: 24px;
+   font-weight: 600;
+   padding: 5px 0;
+   color: #000;
+   text-transform: uppercase;
+   position: relative;
+}
+
+
+
+.sign_section label.col-form-label {
+   margin: 0;
+   padding: 0;
+   color: #ffffff;
+   font-size: 16px;
+   font-weight: 600;
+   line-height: 36px;
+}
+
+.sign_section .form-control {
+   background-color: transparent !important;
+   border: none;
+   box-shadow: none;
+   border-radius: 0;
+   border: 1px solid #000;
+   color: #fff !important;
+   padding: 0 29px;
+   height: 39px;
+   line-height: 36px;
+   font-size: 14px;
+}
+
+.sign_section .form-control::placeholder {
+   color:  #000;
+   opacity: 0.8;
+}
+
+.sign_section .form-control:-ms-input-placeholder {
+   opacity: 0.8;
+   color: #000;
+}
+
+.sign_section .form-control::-ms-input-placeholder {
+   opacity: 0.8;
+   color: #000;
+}
+
+.sign_section .btn.btn-primary {
+
+       background-color: #555ec4;
+    border-color: #555ec4;
+   line-height: 42px;
+   padding: 0 24px;
+   font-size: 15px;
+   letter-spacing: 0.6px;
+   transition: ease all 0.4s;
+
+ display: block;
+    width: 30%;
+    margin: 0 auto;
+}
+
+/*.sign_section .btn.btn-primary:hover,
+.sign_section .btn.btn-primary:not(:disabled):not(.disabled):active {
+   color: #000;
+   background-color: #7d1515;
+   border-color: #7d1515;
+   box-shadow: none;
+   color: #fff;*/
+   /*transform: translate(-2px ,-2px);*/
+/*}*/
+
+.main-header ul.nav.navbar-nav li {
+   margin-left: 0;
+}
+
+.radio-all .container {
+   display: block;
+   position: relative;
+   padding-left: 27px;
+   margin-bottom: 12px;
+   cursor: pointer;
+   font-size: 14px;
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+   color: #000;
+}
+
+
+/* Hide the browser's default radio button */
+
+.radio-all .container input {
+   position: absolute;
+   opacity: 0;
+   cursor: pointer;
+}
+
+
+/* Create a custom radio button */
+
+.radio-all .checkmark {
+   position: absolute;
+   top: 4px;
+   left: 0;
+   height: 15px;
+   width: 15px;
+   background-color: #e1dcdc;
+   border-radius: 50%;
+}
+
+
+/* On mouse-over, add a grey background color */
+
+.radio-all .container:hover input~.checkmark {
+   background-color: #ccc;
+}
+
+
+/* When the radio button is checked, add a blue background */
+
+.radio-all .container input:checked~.checkmark {
+   background-color: #176DF3;
+}
+
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+
+.radio-all .checkmark:after {
+   content: "";
+   position: absolute;
+   display: none;
+}
+
+
+/* Show the indicator (dot/circle) when checked */
+
+.radio-all .container input:checked~.checkmark:after {
+   display: block;
+}
+
+
+/* Style the indicator (dot/circle) */
+
+.radio-all .container .checkmark:after {
+   top: 9px;
+   left: 9px;
+   width: 8px;
+   height: 8px;
+   border-radius: 50%;
+   /*background: white;*/
+}
+
+.radio-all {
+   display: flex;
+}
+
+.email-1,
+.pass-1,
+.confirm-pass-1 {
+   position: relative;
+}
+
+
+
+
+
+.sign_section .card-header h3 {
+       color: #EF1E00;
+    text-transform: capitalize;
+}
+
+
+
+.profile-img img{
+
+  width: 80px !important;
+
+}
+
+.sign_section  .form-group {
+    margin-bottom: 0px !important;
+}
+
+
+
+
+nav.navbar.navbar-expand-lg.navbar-light.logo-c1 img{
+
+  width: 110px !important;
+
+}
+
+.sign_section  .form-group.row.forgot-c {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: right;
+    color: #555ec4;
+    font-weight: 600;
+}
+
+
+.sign_section .form-control {
+    background-color: #ebf8ff !important;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    border: unset;
+    color: #080808 !important;
+    padding: 0 27px;
+    height: 51px;
+    line-height: 36px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+.sign_section span.eye-icon {
+    position: absolute;
+    top: 13px;
+    right: 31px;
+    color: #7b7171;
+    font-size: 19px;
+}
+
+.sign_section .form-control{
+
+position: relative;
+
+}
+
+
+.sign_section .col-12.remember-me {
+    position: relative;
+    left: 21px;
+    margin-bottom: 22px;
+    color: #000;
+}
+
+.sign_section .col-12.remember-me .text-muted {
+    color: #6c757d!important;
+    font-weight: 600;
+    font-size: 19px;
+}
+
+
+.sign_section input[type=checkbox], input[type=radio] {
+        box-sizing: border-box;
+    padding: 10px;
+    height: 24px;
+    width: 16px;
+}
+
+
+
+
+.sign_section label.col-form-label {
+    display: none;
+    margin: 0;
+    padding: 0;
+    color: #484242;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 36px;
+}
+
+
+.col-12.email-1 {
+    margin-bottom: 25px;
+}
+
+
+.sign_section .card-body {
+    padding: 40px;
+}
+
+.sign_section input[type=checkbox], input[type=radio] {
+    box-sizing: border-box;
+    padding: 10px;
+    height: 24px;
+    width: 16px;
+    position: relative;
+    top: 6px;
+}
+
+
+
+.sign_section .col-12.remember-me .text-muted {
+    color: #6c757d!important;
+    font-weight: 600;
+    font-size: 16px;
+
+}
+
+
+.sign_section .btn.btn-primary {
+     background-color: #56bbb7;
+    border-color: #56bbb7;
+    line-height: 42px;
+    padding: 0 24px;
+    font-size: 15px;
+    letter-spacing: 0.6px;
+    transition: ease all 0.4s;
+    display: block;
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+    float: right;
+    border-radius: 0px;
+    text-transform: uppercase;
+    font-weight: 600;
+
+}
+
+
+
+
+
+
+
+.sign_section h4.hello-text {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: #060606;
+    font-weight: 600;
+}
+
+
+
+.sign_section h5.hello-text {
+    text-align: center;
+    color: #9a9393;
+    font-size: 16px;
+    line-height: 3px;
+    margin-bottom: 43px;
+    font-weight: 600;
+}
+
+
+.email-1::before {
+    content: "\f003";
+    font-family: 'FontAwesome';
+    position: absolute;
+    z-index: 1;
+    font-size: 16px;
+    color: #2b2828;
+    left: 7px;
+    top: 13px;
+}
+
+.pass-1::before {
+content: "\f023";
+    font-family: 'FontAwesome';
+    position: absolute;
+    z-index: 1;
+    font-size: 16px;
+    color: #1f1d1d;
+    left: 10px;
+    top: 15px;
+}
+
+.confirm-pass-1::before {
+   content: "\f09c";
+   font-family: 'FontAwesome';
+   position: absolute;
+   z-index: 1;
+   font-size: 16px;
+   color: #EF1E00;
+   left: 24px;
+   top: 43px;
+}
+
+
+
+
+.form-group.row.forgot-c  span {
+
+
+     color: #56bbb7;
+
+}
+
+
+
+
+.sign_section .form-control {
+    background-color: #ebf8ff !important;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    border: unset;
+    color: #080808 !important;
+    padding: 0 38px;
+
+
+    }
+
+
+  .sign_section .btn.btn-primary {
+    
+    margin-top: 45px;
+}
+
+
+.card-header .logo-c {
+    position: relative;
+    top: 43px;
+}
+
+
+
+.sign_section-1::after {
+    content: '';
+    background: url(../images/img-1/login_bottom.png) no-repeat center center/cover;
+    position: absolute;
+    opacity: 1;
+    /* top: 36px; */
+    /* left: 80px; */
+    z-index: 99999999999999999;
+background-repeat: no-repeat;
+    content: "" !important;
+    height: 377px;
+position: absolute;
+   right: -154px;
+    bottom: -44px;
+   width: 480px;
+    
+}
+
+
+.sign_section input[type=checkbox], input[type=radio] {
+    box-sizing: border-box;
+    padding: 10px;
+    height: 24px;
+    width: 16px;
+    position: relative;
+    top: 8px;
+    margin-left: 14px;
+    left: -6px;
+}
+
+
+
+.sign_section-1::after {
+    content: '';
+    background: url(../images/img-1/login_bottom.png) no-repeat center center/cover;
+    position: absolute;
+    opacity: 1;
+    /* top: 36px; */
+    /* left: 80px; */
+    z-index: 99999999999999999;
+    background-repeat: no-repeat;
+    content: "" !important;
+    height: 305px;
+    position: absolute;
+    right: -154px;
+    bottom: -44px;
+    width: 425px;
+}
+
+
+
+.pass-1::before {
+    display: none;
+}
+
+.email-1::before{
+
+display: none;
+
+}
+
+
+.mail-login img {
+    position: relative;
+    top: 38px;
+    z-index: 9999999;
+    width: 26px;
+    left: 5px;
+}
+
+::placeholder{
+
+    color: #000;
+    height: 51px;
+    line-height: 36px;
+    font-size: 15px;
+    font-weight: 500;
+
+}
+
+
+.sign_section .form-control{
+
+
+   font-size: 15px !important;
+    font-weight: 500 !important;
+
+}
+
+
+.sign_section .form-control {
+    background-color: #c3e6e4 !important;
+}
+
+
+.sign_section .card-body {
+    padding: 80px;
+}
+
+
+.sign_section span.eye-icon {
+   
+    position: absolute;
+    top: 38px;
+    right: 20px;
+
+}
+
+
+.sign_section .form-group.row.forgot-c{
+
+    text-align: left;
+
+}
+
+
+.sign_section input[type=checkbox]{
+    margin-left: 2px !important;
+
+}
+
+
+span.logo-h {
+    position: relative;
+    top: 46px;
+    font-size: 19px;
+}
+
+
+.sign_section .card-body {
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 40px;
+}
+
+
+
+
+.sign_section {
+    height: 180vh;
+
+}
+
+
+
+.sign_section:after {
+    
+    position: absolute;
+    height: 180vh;
+
+}
+
+
+
+
+
+
+
+.sign_section {
+    height: 140vh;
+
+}
+
+
+
+.sign_section:after {
+    
+    position: absolute;
+    height: 140vh;
+
+}
+
+
+.sign_section{
+
+
+    background-position: top 60px right -60px !important;
+
+
+}
+
+
+
+.sign_section-1 {
+    width: 100%;
+}
+
+
+
+.sign_section-1::after{
+
+ right: 23px; 
+ z-index: 9999999999999;
+}
+
+
+
+
+.sign-login {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+
+
+a.ml-2.text-sm.text-gray-600.forgot-ce {
+    text-align: right;
+    float: right;
+    color: #abdcda;
+    margin-right: -14px;
+}
+
+
+
+input#remember_me {
+    position: relative;
+    top: -7px;
+    left: -15px;
+}
+
+
+
+span.ml-2.text-sm.text-gray-600.rem{
+    position: relative;
+    top: -14px;
+    left: -8px;
+}
+
+
+
+
+.sign_section .form-control::placeholder  {
+
+    color: #000;
+    height: 51px;
+    line-height: 36px;
+    font-size: 15px;
+    font-weight: 500;
+
+}

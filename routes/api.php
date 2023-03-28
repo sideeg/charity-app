@@ -15,7 +15,7 @@ use App\Http\Controllers\API\providerApicontroller;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
+ 
 // Route::middleware('auth:api')->get('/user', function (Request $request) {
 //     return $request->user();
 // });
@@ -68,7 +68,9 @@ Route::post('resend-otp',[LoginController::class, 'resendOtp']);
 Route::post('initiative/login',[LoginController::class, 'providerLogin'])->name('providerLogin');
 Route::post('initiative/verify-otp',[LoginController::class, 'otpVerifyProvider']);
 
- Route::get('all-countries',[LoginController::class, 'getCountry']);
+ //Route::get('all-countries',[LoginController::class, 'getCountry']);
+ Route::get('all-countries','LoginController@getCountry');
+
  Route::post('all-states',[LoginController::class, 'allStates']);
  Route::post('all-cities',[LoginController::class, 'allCities']);
 Route::group( ['prefix' => 'initiative' ],function(){

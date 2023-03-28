@@ -69,7 +69,7 @@ Route::post('initiative/login',[LoginController::class, 'providerLogin'])->name(
 Route::post('initiative/verify-otp',[LoginController::class, 'otpVerifyProvider']);
 
  //Route::get('all-countries',[LoginController::class, 'getCountry']);
- Route::get('all-countries','LoginController@getCountry');
+ Route::get('all-countries',[LoginController::class, 'getCountry']);
 
  Route::post('all-states',[LoginController::class, 'allStates']);
  Route::post('all-cities',[LoginController::class, 'allCities']);

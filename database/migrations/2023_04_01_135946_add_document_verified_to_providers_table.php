@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddStatusToProvidersTable extends Migration
+class AddDocumentVerifiedToProvidersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,9 +14,7 @@ class AddStatusToProvidersTable extends Migration
     public function up()
     {
         Schema::table('providers', function (Blueprint $table) {
-             $table->integer('status')->default(1);
-             
-
+            $table->integer('document_verified')->default(1);
         });
     }
 
@@ -28,9 +26,7 @@ class AddStatusToProvidersTable extends Migration
     public function down()
     {
         Schema::table('providers', function (Blueprint $table) {
-                       $table->dropColumn('status');
-
-
+           $table->dropColumn('document_verified');
         });
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddStatusToProvidersTable extends Migration
+class AddStatusToMattersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,8 @@ class AddStatusToProvidersTable extends Migration
      */
     public function up()
     {
-        Schema::table('providers', function (Blueprint $table) {
-             $table->integer('status')->default(1);
-             
-
+        Schema::table('matters', function (Blueprint $table) {
+            $table->integer('status')->default(1);
         });
     }
 
@@ -27,10 +25,8 @@ class AddStatusToProvidersTable extends Migration
      */
     public function down()
     {
-        Schema::table('providers', function (Blueprint $table) {
-                       $table->dropColumn('status');
-
-
+        Schema::table('matters', function (Blueprint $table) {
+            $table->dropColumn('status');
         });
     }
 }

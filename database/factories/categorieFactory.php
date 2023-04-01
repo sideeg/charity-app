@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\Admin;
+use App\Models\categorie;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class AdminFactory extends Factory
+class categorieFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Admin::class;
+    protected $model = categorie::class;
 
     /**
      * Define the model's default state.
@@ -22,10 +22,10 @@ class AdminFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->name(),
-            'email' => 'ahmed2@admin.org',
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
             
+            'title'=>$this->faker->name(),
+           'sub-title'=>$this->faker->name().$this->faker->name(),
+           'status'=>1
         ];
     }
 }

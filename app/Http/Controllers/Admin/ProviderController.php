@@ -175,13 +175,20 @@ class ProviderController extends Controller
 
         $user->registration_number = $request->registration_number;
            $user->country = countrie::where('id',$request->country)->pluck('title')->first();
+           $user->country_ar = countrie::where('id',$request->country)->pluck('title_ar')->first();
+
         $user->city = city::where('id',$request->city)->pluck('title')->first();
-         $user->state = state::where('id',$request->state)->pluck('title')->first();
+        $user->city_ar = city::where('id',$request->city)->pluck('title')->first();
+        $user->state = state::where('id',$request->state)->pluck('title')->first();
         $user->location = $request->location;
         $user->location_ar = $request->location_ar;
         $user->contact_name = $request->contact_name;
         $user->contact_number = $request->contact_number;
         $user->contact_name_ar = $request->contact_name_ar;
+        $user->device_type = 'android';
+        $user->type = 'Individual';
+        $user->business_name = $request->business_name;
+        $user->device_token = '';
         // $user->contact_name = $request->contact_name;
         if ($request->hasFile('register_image'))
         {

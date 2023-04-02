@@ -42,6 +42,15 @@
                               <input type="text" class="form-control"   name="name" placeholder=" Name " value="{{old('name')}}" name="name" pattern="[a-zA-Z\s]+" oninvalid="setCustomValidity('Please enter on alphabets only. ')" onkeydown="try{setCustomValidity('')}catch(e){}" onkeypress="return /[a-zA-Z\s]+/i.test(event.key)" required>
                            </div>
                         </div>
+                         <div class="col-md-12">
+                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6">
+                           <div class="form-label">
+                              <p class="col-grey">  Name AR</p>
+                           </div>
+                           <div class="form-field1 m-b-20">
+                              <input type="text" class="form-control"   name="name_ar" placeholder=" Name AR" value="{{old('name_ar')}}" name="name_ar"  oninvalid="setCustomValidity('Please enter on alphabets only. ')" required>
+                           </div>
+                        </div>
                      
                         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6">
                            <div class="form-label">
@@ -188,7 +197,21 @@
                               <input type="email" class="form-control"  name='email' value="{{old('email')}}" required>
                            </div>
                         </div>
-
+                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6">
+                           <div class="form-label">
+                              <p class="col-grey"> Business Name  </p>
+                           </div>
+                        <div class="form-field1 m-b-20">
+                              <input type="text"   name="business_name"     value="{{old('business_name')}}">
+                           </div>
+                           <div>
+                           <div class="form-label">
+                              <p class="col-grey">  Location Ar  </p>
+                           </div>
+                        <div class="form-field1 m-b-20">
+                              <input type="text"   name="location_ar"     value="{{old('location_ar')}}">
+                           </div>
+</div>
                      </div>
              </div>
                   <div class="row">

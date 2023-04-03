@@ -204,14 +204,14 @@
                         <div class="form-field1 m-b-20">
                               <input type="text"   name="business_name"     value="{{old('business_name')}}">
                            </div>
-                           <div>
+                           <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6">
                            <div class="form-label">
                               <p class="col-grey">  Location Ar  </p>
                            </div>
                         <div class="form-field1 m-b-20">
                               <input type="text"   name="location_ar"     value="{{old('location_ar')}}">
                            </div>
-</div>
+
                      </div>
              </div>
                   <div class="row">

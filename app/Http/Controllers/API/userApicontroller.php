@@ -36,8 +36,10 @@ class userApicontroller extends Controller
     	$categorie = categorie::where('status',1)->get();
     	if(count($categorie) > 0)
     	{
+                		return response()->json(['status'=>true,'message'=>"Categories Data",'data'=>$categorie], 200);
+
             foreach ($categorie as $key => $value) {
-               $value->image = url('storage/app/').'/'.$value->image;
+               $value->image = url('charity-app/storage/app/').'/'.$value->image;
             }
     		return response()->json(['status'=>true,'message'=>"Categories Data",'data'=>$categorie], 200);
     	}

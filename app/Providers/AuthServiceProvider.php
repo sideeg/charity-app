@@ -27,7 +27,9 @@ class AuthServiceProvider extends ServiceProvider
         $this->registerPolicies();
 
        
-        Passport::routes();
+        // Passport::routes();
+        Passport::routes(null, array('prefix' => 'api/oauth', 'middleware'  =>  array('auth:api', 'web', 'auth')));
+        Passport::ignoreCsrfToken(true);
 
         Passport::tokensCan([
             'user' => 'User Type',

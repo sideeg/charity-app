@@ -647,7 +647,8 @@ class LoginController extends Controller
     }
     public function registerProvider(Request $request)
     {
-        return response()->json(['status'=>false,'message'=>$request->all(),'error'=>$request->hasFile('register_image')], 200);
+        // return response()->json(['status'=>false,'message'=>$request->all(),'error'=>$request->hasFile('register_image')], 200);
+        echo '1';
         $validator = Validator::make($request->all(), [
             'name' => 'required_if:name_ar,=,null|string|between:2,100|nullable',
             'name_ar' => 'required_if:name,null|string|between:2,100|nullable',
@@ -674,7 +675,9 @@ class LoginController extends Controller
                  'device_type'=> 'in:android,ios',         
 
         ]);
+        echo '2';
         if ($validator->fails()) {
+            echo '3';
             return response()->json(['status'=>false,'message'=>$validator->errors()->first(),'error'=>$validator->errors()->first()], 200);
         }
 
@@ -700,8 +703,10 @@ class LoginController extends Controller
         $user->contact_number = $request->contact_number;
         $user->contact_name = $request->contact_name;
         $user->contact_name_ar = $request->contact_name_ar;
+        echo '4';
         if ($request->hasFile('register_image'))
         {
+            echo '5';
             $user->register_image = $request->register_image->store('public/document');
         }
 
@@ -713,6 +718,7 @@ class LoginController extends Controller
  
         $user->save();
         $categorie = categorie::where('status',1)->get();
+        echo '7';
         foreach($categorie as $key => $value)
         {
             $providerTripsCategorie = new providerNotificationSettings;

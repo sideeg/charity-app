@@ -647,6 +647,7 @@ class LoginController extends Controller
     }
     public function registerProvider(Request $request)
     {
+        return response()->json(['status'=>false,'message'=>$request->all(),'error'=>$request], 200);
         $validator = Validator::make($request->all(), [
             'name' => 'required_if:name_ar,=,null|string|between:2,100|nullable',
             'name_ar' => 'required_if:name,null|string|between:2,100|nullable',
